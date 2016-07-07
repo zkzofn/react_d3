@@ -1,6 +1,8 @@
-# ReduxSimpleStarter
+# React project making graph with D3.js
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+###About###
+
+데이터 파일만을 이용하여 Drag & Drop 으로 D3.js 라이브러리를 이용한 그래프를 만들고 외부에서 이용할 수 있도록 하는 프로젝트
 
 ###Getting Started###
 
@@ -10,14 +12,14 @@ There are two methods for getting started with this repo.
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
+	> git clone https://github.com/zkzofn/react_d3.git
+	> cd react_d3
 	> npm install
 	> npm start
 ```
 
 ####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Click download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
 	> npm install
