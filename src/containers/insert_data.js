@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 import { Dropdown, MenuItem } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import CodeMirror from './code_mirror';
 
 
 class InsertData extends Component {

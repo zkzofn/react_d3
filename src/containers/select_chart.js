@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import Thumbnail from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 class SelectChart extends Component {
   render() {
+    if(!this.props.graph) {
+      return (
+        <section>
+
+        </section>
+      );
+    }
+
     return (
       <section>
         <h3>Choose a Chart</h3>
@@ -81,11 +89,15 @@ class SelectChart extends Component {
 
         </div>
 
-
-
       </section>
     )
   }
 }
 
-export default SelectChart;
+function mapStateToProps(state) {
+  return {
+    graph: state.activeGraph
+  }
+}
+
+export default connect(mapStateToProps)(SelectChart);
