@@ -19,7 +19,7 @@ class SelectChart extends Component {
         </div>
 
         <div className="col-lg-9 col-md-9">
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div className="col-lg-4 col-md-6">
             <div className="layout">
               <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
                    className="layout-thumb responsive"></div>
@@ -28,35 +28,56 @@ class SelectChart extends Component {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+          <div className="col-lg-4 col-md-6">
             <div className="layout">
               <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
                    className="layout-thumb responsive"></div>
+              <p className="layout-inner">
+                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
+              </p>
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div className="col-lg-4 col-md-6">
             <div className="layout">
               <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
                    className="layout-thumb responsive"></div>
+              <p className="layout-inner">
+                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
+              </p>
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div className="col-lg-4 col-md-6">
             <div className="layout">
               <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
                    className="layout-thumb responsive"></div>
+              <p className="layout-inner">
+                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
+              </p>
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div className="col-lg-4 col-md-6">
             <div className="layout">
               <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
                    className="layout-thumb responsive"></div>
+              <p className="layout-inner">
+                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
+              </p>
             </div>
           </div>
 
-
+          <div className="col-lg-4 col-md-6">
+            <div className="layout">
+              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
+                   className="layout-thumb responsive"></div>
+              <p className="layout-inner">
+                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
+              </p>
+            </div>
+          </div>
 
         </div>
 
