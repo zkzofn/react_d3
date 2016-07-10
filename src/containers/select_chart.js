@@ -1,92 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Thumbnail from '../components/thumbnail';
+import AboutGraph from '../components/about_graph';
 
 class SelectChart extends Component {
+  renderThumbnail(graph) {
+    return (
+      <Thumbnail graph={graph} key={graph.title} />
+    );
+  }
+
   render() {
-    if(!this.props.graph) {
-      return (
-        <section>
-
-        </section>
-      );
-    }
-
     return (
       <section>
         <h3>Choose a Chart</h3>
-        <div className="col-lg-3 col-md-3">
-          <h4>Alluvial Diagram (Fineo-like)</h4>
-          <span className="icon-bar"></span>
-          <div>
-            Alluvial diagrams allow to represent flows and to see correlations between categorical dimensions, visually
-            linking to the number of elements sharing the same categories. It is useful to see the evolution of cluster
-            (such as the number of people belonging to a specific group). It can also be used to represent bipartite
-            graphs, using each node group as dimensions.
-            Mainly based on our previous work with Fineo, it is inspired by http://bost.ocks.org/mike/sankey/
-          </div>
-        </div>
+
+        <AboutGraph graph={this.props.activeGraph === null ? this.props.graphs[0] : this.props.activeGraph} />
 
         <div className="col-lg-9 col-md-9">
-          <div className="col-lg-4 col-md-6">
-            <div className="layout">
-              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
-                   className="layout-thumb responsive"></div>
-              <p className="layout-inner">
-                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div className="layout">
-              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
-                   className="layout-thumb responsive"></div>
-              <p className="layout-inner">
-                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div className="layout">
-              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
-                   className="layout-thumb responsive"></div>
-              <p className="layout-inner">
-                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div className="layout">
-              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
-                   className="layout-thumb responsive"></div>
-              <p className="layout-inner">
-                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div className="layout">
-              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
-                   className="layout-thumb responsive"></div>
-              <p className="layout-inner">
-                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6">
-            <div className="layout">
-              <div style={{backgroundImage: 'url(/assets/img/thumbnail/barchart.png)'}}
-                   className="layout-thumb responsive"></div>
-              <p className="layout-inner">
-                <span className="layout-title">Alluvial Diagram (Fineo-like)</span>
-              </p>
-            </div>
-          </div>
-
+          {this.props.graphs.map(this.renderThumbnail)}
         </div>
 
       </section>
@@ -96,7 +28,8 @@ class SelectChart extends Component {
 
 function mapStateToProps(state) {
   return {
-    graph: state.activeGraph
+    activeGraph: state.activeGraph,
+    graphs: state.graphs
   }
 }
 
