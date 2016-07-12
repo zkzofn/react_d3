@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import NavBar from '../containers/nav_bar';
 import InsertData from '../containers/insert_data';
 import SelectChart from '../containers/select_chart';
+import MapDimensions from '../containers/map_dimensions';
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,8 @@ export default class App extends Component {
         <NavBar />
         <InsertData />
         <SelectChart />
+        
+        <MapDimensions />
       </div>
     );
   }

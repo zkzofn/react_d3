@@ -94,3 +94,64 @@ section {
 section.dark {
     background-color: #ECECEC;
 }
+
+.dimension-placeholder, .dimension {
+    cursor: move;
+    color: #ffffff;
+    background-color: #0dc4a3;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 8px 10px;
+    position: relative;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    opacity: .85;
+    -webkit-transition: background .1s ease-in-out;
+    -moz-transition: background .1s ease-in-out;
+    -ms-transition: background .1s ease-in-out;
+    -o-transition: background .1s ease-in-out;
+    transition: background .1s ease-in-out;
+}
+
+.dimension-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin: 10px 0px 5px 0px;
+}
+
+.dimensions-container {
+    padding: 0px;
+    min-height: 55px;
+    margin-bottom: 0px;
+}
+
+.msg {
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.dimensions-model {
+    position: relative;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    -webkit-transition: border .15s ease-in-out;
+    -moz-transition: border .15s ease-in-out;
+    -ms-transition: border .15s ease-in-out;
+    -o-transition: border .15s ease-in-out;
+    transition: border .15s ease-in-out;
+}

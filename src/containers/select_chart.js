@@ -33,8 +33,8 @@ class SelectChart extends Component {
 
   render() {
     return (
-      <section className="dark">
-        <div>
+      <section>
+        <div className="clearfix">
           <h3>Choose a Chart</h3>
 
           <div className="col-lg-3 col-md-3">
@@ -45,8 +45,6 @@ class SelectChart extends Component {
             {this.renderThumbnail()}
           </div>
         </div>
-
-
       </section>
     )
   }
