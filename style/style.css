@@ -86,3 +86,11 @@
     -o-transition: opacity .2s ease-in-out;
     transition: opacity .2s ease-in-out;
 }
+
+section {
+    padding: 40px 0px;
+}
+
+section.dark {
+    background-color: #ECECEC;
+}

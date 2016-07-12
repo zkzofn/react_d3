@@ -33,14 +33,19 @@ class SelectChart extends Component {
 
   render() {
     return (
-      <section>
-        <h3>Choose a Chart</h3>
+      <section className="dark">
+        <div>
+          <h3>Choose a Chart</h3>
 
-        <AboutGraph graph={this.props.activeGraph === null ? this.props.graphs[0] : this.props.activeGraph} />
+          <div className="col-lg-3 col-md-3">
+            <AboutGraph graph={this.props.activeGraph === null ? this.props.graphs[0] : this.props.activeGraph} />
+          </div>
 
-        <div className="col-lg-9 col-md-9">
-          {this.renderThumbnail()}
+          <div className="col-lg-9 col-md-9">
+            {this.renderThumbnail()}
+          </div>
         </div>
+
 
       </section>
     )
