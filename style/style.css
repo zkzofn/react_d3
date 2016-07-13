@@ -155,3 +155,20 @@ section.dark {
     -o-transition: border .15s ease-in-out;
     transition: border .15s ease-in-out;
 }
+
+.dimension-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin: 10px 0px 5px 0px;
+}
+
+.dimensions-container {
+    padding: 0px;
+    min-height: 55px;
+    margin-bottom: 0px;
+}
+
