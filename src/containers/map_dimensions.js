@@ -1,44 +1,36 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import Draggable from '../components/draggable';
+import Droppable from '../components/droppable';
 
 class MapDimensions extends Component {
-
-  drag(event) {
-    console.log("drag here");
-  }
-
   renderDimensions() {
-    return(
+    return (
       <div>
-        <li className="dimension" draggable="true" onDragStart={this.drag.bind(this)}>Cocktail</li>
-        <li className="dimension" draggable="true">Parts</li>
-        <li className="dimension" draggable="true">Ingredient</li>
+        <Draggable id="drag1" type="1" className="dimension">Cocktail1</Draggable>
+        <Draggable id="drag2" type="2" className="dimension">Cocktail2</Draggable>
+        <Draggable id="drag3" type="3" className="dimension">Cocktail3</Draggable>
+        <Draggable id="drag4" type="4" className="dimension">Cocktail4</Draggable>
       </div>
     )
-
   }
 
   renderDimensionModel() {
-    return(
+    return (
       <div className="dimensions-model">
         <p className="dimension-title">Steps</p>
-        <ul className="dimensions-container list-unstyled">
-          <div className="msg">
-            Drag numbers here
-          </div>
-          <li className="dimension">
-            key type
-          </li>
-        </ul>
+        <div className="msg">
+          Drag numbers here
+        </div>
+        <Droppable className="dimensions-container" types={['1', '3']}>
 
-        
-
+        </Droppable>
       </div>
     )
   }
 
 
   render() {
-    return(
+    return (
       <section className="dark">
         <div className="clearfix">
           <h3>Map your dimensions</h3>
@@ -50,6 +42,9 @@ class MapDimensions extends Component {
             </div>
             <div className="col-lg-9 col-md-9">
               <div className="row">
+                <div className="col-lg-4 col-md-4">
+                  {this.renderDimensionModel()}
+                </div>
                 <div className="col-lg-4 col-md-4">
                   {this.renderDimensionModel()}
                 </div>

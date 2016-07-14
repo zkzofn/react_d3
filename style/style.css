@@ -172,3 +172,37 @@ section.dark {
     margin-bottom: 0px;
 }
 
+.dimension.invalid {
+    background-color: #F8E937;
+    color: #000;
+}
+
+.chart-resize {
+    padding: 0px;
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+.breath-right {
+    margin-right: 8px;
+}
+
+textarea {
+    webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    padding: 6px;
+    font-weight: 400;
+    border-radius: 2px;
+}

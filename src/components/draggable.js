@@ -2,48 +2,21 @@ import React, {Component} from 'react';
 
 
 class Draggable extends Component {
-  onDrop(data) {
-    console.log(data);
-    // => banana  
-  }
-
-
   drag(event) {
-    event.dataTransfer.setData("dragTarget", event.target.id);
-    console.log(event.dataTransfer.getData("text"));
+    event.dataTransfer.setData("draggableId", event.target.id);
+    event.dataTransfer.setData("draggableType", this.props.type);
   }
-  
-// return (
-  //   <div>
-  //     <ul>
-  //       <Draggable type="fruit" data="banana">
-  //         <li>Banana</li>
-  //       </Draggable>
-  //       <Draggable type="fruit" data="apple">
-  //         <li>Apple</li>
-  //       </Draggable>
-  //       <Draggable type="metal" data="silver">
-  //         <li>Silver</li>
-  //       </Draggable>
-  //     </ul>
-  //     <Droppable
-  //       types={['fruit']} // <= allowed drop types
-  //       onDrop={this.onDrop.bind(this)}>
-  //       <ul className="Smoothie">
-  //         <li>here</li>
-  //       </ul>
-  //     </Droppable>
-  //   </div >
-  // )
-  
+
   render() {
     return (
-      <div>
-        <img src="/assets/img/thumbnail/force.png"  id="drag1" draggable="true" onDragStart={this.drag.bind(this)} />
-
+      <div id={this.props.id}
+           className={this.props.className}
+           draggable="true"
+           onDragStart={this.drag.bind(this)}>
+        {this.props.children}
       </div>
     );
-    
+
   }
 }
 
