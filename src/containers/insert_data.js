@@ -14,7 +14,9 @@ class InsertData extends Component {
 
     return (
       <section>
-        Insert your data
+        <div>
+          Insert your data
+        </div>
         <Dropdown id="dropdown-choose-sample" className="borderless">
           <Dropdown.Toggle>
             <span>
