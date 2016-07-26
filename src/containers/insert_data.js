@@ -4,14 +4,17 @@ import {Dropdown, MenuItem} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 
 class InsertData extends Component {
-
+  constructor (props) {
+    super(props);
+    
+    this.state = {
+      term: '',
+      termCSV: []
+    }
+    
+  }
 
   render() {
-    CodeMirror(document.body, {
-      value: 'function myScript(){return 100;}\n',
-      mode: 'javascript'
-    });
-
     return (
       <section>
         <div>
@@ -33,8 +36,12 @@ class InsertData extends Component {
 
         <form>
           <FormGroup>
-            <FormControl componentClass="textarea" placeholder="textarea" rows="15"/>
-            <div id="insertDate" placeholder="Code mirror" ></div>
+            <FormControl componentClass="textarea" 
+                         placeholder="textarea" 
+                         rows="15"
+                         value={this.props.term}
+                         onChange={event => this.onInputChange(event.target.value)}
+            />
           </FormGroup>
         </form>
 
@@ -43,6 +50,19 @@ class InsertData extends Component {
         <Button className="btn-block">This needs to event option</Button>
       </section>
     )
+  }
+
+
+
+  onInputChange(term) {
+    this.setState({term});
+
+    this.setTermToCSV({term});
+    console.log({term});    //term 에 {}를 씌우면 object 로 console 에 출력된다.
+  }
+
+  setTermToCSV(term) {
+    // t
   }
 }
 
