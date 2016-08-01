@@ -10,7 +10,7 @@ class Export extends Component {
         <div className="col-lg-9">
           <h3>
             <i className="fa fa-code breath-right"/>
-            Embed Code12312123123123113312132
+            Embed Code
           </h3>
         </div>
       </div>

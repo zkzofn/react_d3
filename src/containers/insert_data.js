@@ -57,12 +57,17 @@ class InsertData extends Component {
   onInputChange(term) {
     this.setState({term});
 
-    this.setTermToCSV({term});
-    console.log({term});    //term 에 {}를 씌우면 object 로 console 에 출력된다.
+    this.setTermToCSV(term);
   }
 
   setTermToCSV(term) {
-    // t
+    const termArray = term.split(/\r?\n|\r/);
+    const termCSV = termArray.map((termLine) => {
+      return termLine.split(',');
+    });
+
+    this.setState({termCSV});
+    console.log(termCSV);
   }
 }
 
